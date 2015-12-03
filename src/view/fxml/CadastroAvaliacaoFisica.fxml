@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane fx:id="AnchorPaneForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroAvaliacaoFisicaController">
+   <children>
+      <HBox fx:id="HBoxForm" alignment="CENTER" prefHeight="60.0" prefWidth="800.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="ButtonNovo" layoutX="100.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Novo" />
+            <Button fx:id="ButtonSalvar" layoutX="219.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Salvar" />
+            <Button fx:id="ButtonModificar" mnemonicParsing="false" prefWidth="70.0" text="Modificar" />
+            <Button fx:id="ButtonCancelar" layoutX="408.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Cancelar" />
+            <Button fx:id="ButtonExcluir" layoutX="503.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Excluir" />
+            <Button fx:id="ButtonBuscar" layoutX="588.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Buscar" />
+            <Button fx:id="ButtonFechar" layoutX="575.0" layoutY="29.0" mnemonicParsing="false" prefWidth="70.0" text="Fechar" />
+         </children>
+      </HBox>
+      <Pane fx:id="PaneForm" layoutX="72.0" layoutY="108.0" prefHeight="440.0" prefWidth="633.0" style="-fx-background-color: #ffffff; -fx-border-color: #c0c0c0;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <HBox fx:id="HBoxPlano" layoutX="120.0" layoutY="158.0" spacing="10.0" />
+            <HBox fx:id="HBoxHorario" layoutX="120.0" layoutY="193.0" />
+         </children>
+      </Pane>
+      <Label layoutX="14.0" layoutY="-1.0" prefHeight="52.0" prefWidth="107.0" text="Avaliação Fisica" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+        <tabs>
+          <Tab text="Avaliado">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="40.0" prefHeight="23.0" prefWidth="110.0" text="Codigo" AnchorPane.leftAnchor="0.0" />
+                        <TextField layoutX="121.0" layoutY="40.0" prefWidth="70.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="50.0" layoutY="75.0" prefHeight="23.0" prefWidth="110.0" text="Avaliado" AnchorPane.leftAnchor="0.0" />
+                        <TextField layoutX="121.0" layoutY="75.0" prefWidth="70.0" />
+                        <Button layoutX="201.0" layoutY="75.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="23.0" />
+                        <TextField layoutX="234.0" layoutY="75.0" prefWidth="300.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="534.0" layoutY="75.0" prefHeight="23.0" prefWidth="110.0" text="Idade atual" />
+                        <TextField layoutX="655.0" layoutY="75.0" prefWidth="70.0" />
+                        <Label alignment="CENTER_RIGHT" layoutY="110.0" prefHeight="23.0" prefWidth="110.0" text="Avaliador" />
+                        <TextField layoutX="121.0" layoutY="110.0" prefWidth="70.0" />
+                        <Button layoutX="201.0" layoutY="110.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="23.0" />
+                        <TextField layoutX="234.0" layoutY="110.0" prefWidth="300.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="534.0" layoutY="110.0" prefHeight="23.0" prefWidth="110.0" text="Data Avaliação" />
+                        <DatePicker layoutX="655.0" layoutY="110.0" prefWidth="140.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Anamnese">
+            <content>
+              <AnchorPane maxHeight="1000.0" maxWidth="1000.0" minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="880.0">
+                     <children>
+                        <ScrollPane layoutX="102.0" layoutY="66.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="900.0" prefWidth="878.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" layoutY="32.0" prefHeight="23.0" prefWidth="280.0" text="Objetivos com a prática da musculação:" AnchorPane.leftAnchor="0.0" />
+                                    <RadioButton fx:id="RadioButtonCondicionamento" layoutX="291.0" layoutY="32.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="160.0" text="Condicionamento fisico" />
+                                    <RadioButton fx:id="RadioButtonModelar" layoutX="451.0" layoutY="32.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="160.0" text="Modelar o corpo" />
+                                    <RadioButton fx:id="RadioButtonHipertrofia" layoutX="611.0" layoutY="32.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="160.0" text="Hipertrofia" />
+                                    <RadioButton fx:id="RadioButtonReabilitacao" layoutX="291.0" layoutY="59.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="160.0" text="Reabilitação/Terapia" />
+                                    <RadioButton fx:id="RadioButtonEmagrecimento" layoutX="451.0" layoutY="59.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="160.0" text="Emagrecimento" />
+                                    <RadioButton fx:id="RadioButtonSaude" layoutX="611.0" layoutY="59.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="160.0" text="Saúde" />
+                                    <RadioButton fx:id="RadioButtonPreparacao" layoutX="291.0" layoutY="86.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="240.0" text="Preparação física para outros esportes" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="143.0" prefHeight="23.0" prefWidth="280.0" text="Está tomando qualquer medicamento?" />
+                                    <ComboBox fx:id="ComboBoxMedicamento" layoutX="291.0" layoutY="143.0" prefWidth="70.0" />
+                                    <Label fx:id="LabelMedicamento" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="143.0" prefHeight="23.0" prefWidth="70.0" text="Qual?" />
+                                    <TextField fx:id="TextFieldMedicamento" layoutX="441.0" layoutY="143.0" prefWidth="350.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="178.0" prefHeight="23.0" prefWidth="280.0" text="Está em tratamento médico?" />
+                                    <ComboBox fx:id="ComboBoxTratamento" layoutX="290.0" layoutY="178.0" prefWidth="70.0" />
+                                    <Label fx:id="LabelTratamento" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="178.0" prefHeight="23.0" prefWidth="70.0" text="Contra?" />
+                                    <TextField fx:id="TextFieldTratamento" layoutX="441.0" layoutY="178.0" prefWidth="350.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="213.0" prefHeight="23.0" prefWidth="280.0" text="Já esteve seriamente doente ou hospitalizado?" />
+                                    <ComboBox fx:id="ComboBoxHospitalizado" layoutX="291.0" layoutY="213.0" prefWidth="70.0" />
+                                    <Label fx:id="LabelHospitalizado" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="213.0" prefHeight="23.0" prefWidth="70.0" text="Porquê?" />
+                                    <TextField fx:id="TextFieldHospitalizado" layoutX="441.0" layoutY="213.0" prefWidth="350.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="248.0" prefHeight="23.0" prefWidth="280.0" text="Já passou por alguma cirurgia?" />
+                                    <ComboBox fx:id="ComboBoxCirurgia" layoutX="291.0" layoutY="248.0" prefWidth="70.0" />
+                                    <Label fx:id="LabelCirurgia" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="248.0" prefHeight="23.0" prefWidth="70.0" text="Qual?" />
+                                    <TextField fx:id="TextFieldCirurgia" layoutX="441.0" layoutY="248.0" prefWidth="350.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="283.0" prefHeight="23.0" prefWidth="280.0" text="Tem pressão alta?" />
+                                    <ComboBox fx:id="ComboBoxPressao" layoutX="291.0" layoutY="283.0" prefWidth="70.0" />
+                                    <Label fx:id="LabelPressao" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="283.0" prefHeight="23.0" prefWidth="70.0" text="Quanto?" />
+                                    <TextField fx:id="TextFieldPressao" layoutX="441.0" layoutY="283.0" prefWidth="350.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="318.0" prefHeight="23.0" prefWidth="280.0" text="É alérgico a algum medicamento?" />
+                                    <ComboBox fx:id="ComboBoxAlergico" layoutX="291.0" layoutY="318.0" prefWidth="70.0" />
+                                    <Label fx:id="LabelAlergico" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="318.0" prefHeight="23.0" prefWidth="70.0" text="Qual?" />
+                                    <TextField fx:id="TextFieldAlergico" layoutX="441.0" layoutY="318.0" prefWidth="350.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="353.0" prefHeight="23.0" prefWidth="280.0" text="Algum problema ortopédico?" />
+                                    <ComboBox fx:id="ComboBoxOrtopedico" layoutX="291.0" layoutY="353.0" prefWidth="70.0" />
+                                    <Label fx:id="LabelOrtopedico" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="353.0" prefHeight="23.0" prefWidth="70.0" text="Qual?" />
+                                    <TextField fx:id="TextFieldOrtopedico" layoutX="441.0" layoutY="353.0" prefWidth="350.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="388.0" prefHeight="23.0" prefWidth="280.0" text="Lesões?" />
+                                    <ComboBox fx:id="ComboBoxLesoes" layoutX="290.0" layoutY="388.0" prefWidth="70.0" />
+                                    <Label fx:id="LabelLesoes" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="388.0" prefHeight="23.0" prefWidth="70.0" text="Quais?" />
+                                    <TextField fx:id="TextFieldLesoes" layoutX="441.0" layoutY="388.0" prefWidth="350.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="423.0" prefHeight="23.0" prefWidth="280.0" text="Doença Famíliar?" />
+                                    <ComboBox fx:id="ComboBoxFamiliar" layoutX="291.0" layoutY="423.0" prefWidth="70.0" />
+                                    <Label fx:id="LabelFamiliar" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="423.0" prefHeight="23.0" prefWidth="70.0" text="Qual?" />
+                                    <TextField fx:id="TextFieldFamiliar" layoutX="441.0" layoutY="423.0" prefWidth="350.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="458.0" prefHeight="23.0" prefWidth="280.0" text="Funcionamento intestinal regular?" />
+                                    <ComboBox fx:id="ComboBoxIntestinal" layoutX="291.0" layoutY="458.0" prefWidth="70.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="493.0" prefHeight="23.0" prefWidth="280.0" text="Tem hepatite?" />
+                                    <ComboBox fx:id="ComboBoxHepatite" layoutX="291.0" layoutY="493.0" prefWidth="70.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="528.0" prefHeight="23.0" prefWidth="280.0" text="Fuma?" />
+                                    <ComboBox fx:id="ComboBoxFuma" layoutX="291.0" layoutY="528.0" prefWidth="70.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="563.0" prefHeight="23.0" prefWidth="280.0" text="Bebe alcool?" />
+                                    <ComboBox fx:id="ComboBoxAlcool" layoutX="291.0" layoutY="563.0" prefWidth="70.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="598.0" prefHeight="23.0" prefWidth="280.0" text="É diabético?" />
+                                    <ComboBox fx:id="ComboBoxDiabetico" layoutX="291.0" layoutY="598.0" prefWidth="70.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="633.0" prefHeight="23.0" prefWidth="280.0" text="Portador de marcapasso?" />
+                                    <ComboBox fx:id="ComboBoxMarcapasso" layoutX="291.0" layoutY="633.0" prefWidth="70.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="668.0" prefHeight="23.0" prefWidth="280.0" text="Já praticava atividade fisica?" />
+                                    <ComboBox fx:id="ComboBoxAtividade" layoutX="291.0" layoutY="668.0" prefWidth="70.0" />
+                                    <Label fx:id="LabelAtividade" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="668.0" prefHeight="23.0" prefWidth="70.0" text="Qual?" />
+                                    <TextField fx:id="TextFieldAtividade" layoutX="441.0" layoutY="668.0" prefWidth="350.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="703.0" prefHeight="23.0" prefWidth="280.0" text="Faz acompanhamento nutricional?" />
+                                    <ComboBox fx:id="ComboBoxNutricional" layoutX="291.0" layoutY="703.0" prefWidth="70.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="738.0" prefHeight="23.0" prefWidth="280.0" text="Usa suplemento alimentar?" />
+                                    <ComboBox fx:id="ComboBoxSuplemento" layoutX="291.0" layoutY="738.0" prefWidth="70.0" />
+                                    <Label fx:id="LabelSuplemento" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="738.0" prefHeight="23.0" prefWidth="70.0" text="Quais?" />
+                                    <TextField fx:id="TextFieldSuplemento" layoutX="441.0" layoutY="738.0" prefWidth="350.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="773.0" prefHeight="23.0" prefWidth="280.0" text="Alimentação balanceada?" />
+                                    <ComboBox fx:id="ComboBoxAlimentacao" layoutX="291.0" layoutY="773.0" prefWidth="70.0" />
+                                    <Label fx:id="LabelAlimentacao" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="773.0" prefHeight="23.0" prefWidth="70.0" text="Numero?" />
+                                    <TextField fx:id="TextFieldAlimentacao" layoutX="441.0" layoutY="773.0" prefWidth="100.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="808.0" prefHeight="23.0" prefWidth="280.0" text="Tem hábito de ingerir água?" />
+                                    <ComboBox fx:id="ComboBoxAgua" layoutX="291.0" layoutY="808.0" prefWidth="70.0" />
+                                    <Label fx:id="LabelAgua" alignment="CENTER_RIGHT" layoutX="361.0" layoutY="808.0" prefHeight="23.0" prefWidth="70.0" text="Quanto?" />
+                                    <TextField fx:id="TextFieldAgua" layoutX="441.0" layoutY="808.0" prefWidth="100.0" />
+                                    <Label alignment="CENTER_RIGHT" layoutY="857.0" prefHeight="23.0" prefWidth="280.0" text="Treino:" />
+                                    <RadioButton fx:id="RadioButtonAdaptacao" layoutX="291.0" layoutY="857.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="160.0" text="Adaptação" />
+                                    <RadioButton fx:id="RadioButtonIntermediario" layoutX="451.0" layoutY="857.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="160.0" text="Intermediário" />
+                                    <RadioButton fx:id="RadioButtonAvancado" layoutX="611.0" layoutY="857.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="160.0" text="Avançado" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Perímetros">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="213.0" layoutY="52.0" prefHeight="23.0" prefWidth="150.0" text="Pescoço" AnchorPane.rightAnchor="422.0" />
+                        <TextField fx:id="TextFieldPescoco" layoutX="469.0" layoutY="52.0" prefWidth="60.0" AnchorPane.rightAnchor="351.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="529.0" layoutY="52.0" prefHeight="23.0" prefWidth="130.0" text="Ombro" AnchorPane.rightAnchor="191.0" />
+                        <TextField fx:id="TextFieldOmbro" layoutX="736.0" layoutY="52.0" prefWidth="60.0" AnchorPane.rightAnchor="120.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="297.0" layoutY="86.0" prefHeight="23.0" prefWidth="150.0" text="Braço D relaxado" AnchorPane.rightAnchor="422.0" />
+                        <TextField fx:id="TextFieldBracoDR" layoutX="469.0" layoutY="86.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="315.0" layoutY="86.0" prefHeight="23.0" prefWidth="130.0" text="Braço E relaxado" AnchorPane.rightAnchor="191.0" />
+                        <TextField fx:id="TextFieldBracoER" layoutX="740.0" layoutY="87.0" prefWidth="60.0" AnchorPane.rightAnchor="120.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="308.0" layoutY="122.0" prefHeight="23.0" prefWidth="150.0" text="Braço D contraído" AnchorPane.rightAnchor="422.0" />
+                        <TextField fx:id="TextFieldBracoDC" layoutX="469.0" layoutY="122.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="549.0" layoutY="122.0" prefHeight="23.0" prefWidth="130.0" text="Braço E contraído" AnchorPane.rightAnchor="191.0" />
+                        <TextField fx:id="TextFieldBracoEC" layoutX="740.0" layoutY="122.0" prefWidth="60.0" AnchorPane.rightAnchor="120.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="297.0" layoutY="157.0" prefHeight="23.0" prefWidth="150.0" text="Antebraço D" AnchorPane.rightAnchor="422.0" />
+                        <TextField fx:id="TextFieldAntebracoD" layoutX="469.0" layoutY="157.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="560.0" layoutY="157.0" prefHeight="23.0" prefWidth="130.0" text="Antebraço E" AnchorPane.rightAnchor="191.0" />
+                        <TextField fx:id="TextFieldAntebracoE" layoutX="740.0" layoutY="157.0" prefWidth="60.0" AnchorPane.rightAnchor="120.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="300.0" layoutY="192.0" prefHeight="23.0" prefWidth="150.0" text="Tórax relaxado" AnchorPane.rightAnchor="422.0" />
+                        <TextField fx:id="TextFieldToraxR" layoutX="469.0" layoutY="192.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="549.0" layoutY="192.0" prefHeight="23.0" prefWidth="130.0" text="Tórax inspirado" AnchorPane.rightAnchor="191.0" />
+                        <TextField fx:id="TextFieldToraxI" layoutX="746.0" layoutY="192.0" prefWidth="60.0" AnchorPane.rightAnchor="120.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="288.0" layoutY="227.0" prefHeight="23.0" prefWidth="150.0" text="Cintura" AnchorPane.rightAnchor="422.0" />
+                        <TextField fx:id="TextFieldCintura" layoutX="469.0" layoutY="227.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="549.0" layoutY="227.0" prefHeight="23.0" prefWidth="130.0" text="Abdomen" AnchorPane.rightAnchor="191.0" />
+                        <TextField fx:id="TextFieldAbdomen" layoutX="740.0" layoutY="227.0" prefWidth="60.0" AnchorPane.rightAnchor="120.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="290.0" layoutY="262.0" prefHeight="23.0" prefWidth="150.0" text="Coxa D" AnchorPane.rightAnchor="422.0" />
+                        <TextField fx:id="TextFieldCoxaD" layoutX="469.0" layoutY="262.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="549.0" layoutY="262.0" prefHeight="23.0" prefWidth="130.0" text="Coxa E" AnchorPane.rightAnchor="191.0" />
+                        <TextField fx:id="TextFieldCoxaE" layoutX="740.0" layoutY="262.0" prefWidth="60.0" AnchorPane.rightAnchor="120.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="299.0" layoutY="297.0" prefHeight="23.0" prefWidth="150.0" text="Panturrilha D" AnchorPane.rightAnchor="422.0" />
+                        <TextField fx:id="TextFieldPanturrilhaD" layoutX="469.0" layoutY="297.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="549.0" layoutY="297.0" prefHeight="23.0" prefWidth="130.0" text="Panturrilha E" AnchorPane.rightAnchor="191.0" />
+                        <TextField fx:id="TextFieldPanturrilhaE" layoutX="740.0" layoutY="297.0" prefWidth="60.0" AnchorPane.rightAnchor="120.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="296.0" layoutY="332.0" prefHeight="23.0" prefWidth="150.0" text="Quadril" AnchorPane.rightAnchor="422.0" />
+                        <TextField fx:id="TextFieldQuadril" layoutX="469.0" layoutY="332.0" prefWidth="60.0" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Composição">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="-20.0" layoutY="43.0" prefHeight="40.0" prefWidth="80.0" rotate="-90.0" style="-fx-background-color: #B5B5B5;" text="MEDIDAS" />
+                        <Label alignment="CENTER_RIGHT" layoutX="140.0" layoutY="34.0" prefHeight="23.0" prefWidth="150.0" text="Peso" />
+                        <TextField fx:id="TextFieldPeso" layoutX="301.0" layoutY="34.0" prefWidth="60.0" />
+                        <Label alignment="CENTER" layoutX="361.0" layoutY="34.0" prefHeight="23.0" prefWidth="25.0" text="kg" />
+                        <Label alignment="CENTER_RIGHT" layoutX="140.0" layoutY="69.0" prefHeight="23.0" prefWidth="150.0" text="Altura" />
+                        <TextField fx:id="TextFieldAltura" layoutX="301.0" layoutY="69.0" prefWidth="60.0" />
+                        <Label alignment="CENTER" layoutX="361.0" layoutY="69.0" prefHeight="23.0" prefWidth="25.0" text="m" />
+                        <Label alignment="CENTER_RIGHT" layoutX="386.0" layoutY="51.5" prefHeight="23.0" prefWidth="200.0" text="IMC - Índice de Massa Corporal" />
+                        <TextField fx:id="TextFieldImc" layoutX="595.0" layoutY="52.0" prefWidth="60.0" />
+                        <Separator layoutY="126.0" prefHeight="3.0" prefWidth="880.0" />
+                        <Label alignment="CENTER" layoutX="449.0" layoutY="249.0" prefHeight="40.0" prefWidth="130.0" rotate="-90.0" style="-fx-background-color: #B5B5B5;" text="ÍNDICES" AnchorPane.topAnchor="249.0" />
+                        <Label alignment="CENTER" layoutX="-45.0" layoutY="250.0" prefHeight="40.0" prefWidth="130.0" rotate="-90.0" style="-fx-background-color: #B5B5B5;" text="DOBRAS CUTÂNEAS" />
+                        <Separator layoutX="350.0" layoutY="268.0" prefHeight="1.0" prefWidth="286.0" rotate="90.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="205.0" prefHeight="23.0" prefWidth="130.0" text="Triceps" />
+                        <TextField fx:id="TextFieldTriceps" layoutX="181.0" layoutY="205.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="245.0" layoutY="205.0" prefHeight="23.0" prefWidth="90.0" text="Biceps" />
+                        <TextField fx:id="TextFieldBiceps" layoutX="346.0" layoutY="205.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="240.0" prefHeight="23.0" prefWidth="130.0" text="Axilar Média" />
+                        <TextField fx:id="TextFieldAxilar" layoutX="181.0" layoutY="240.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="245.0" layoutY="240.0" prefHeight="23.0" prefWidth="90.0" text="Supra-ilíaca" />
+                        <TextField fx:id="TextFieldSupra" layoutX="346.0" layoutY="240.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="275.0" prefHeight="23.0" prefWidth="130.0" text="Subescapular" />
+                        <TextField fx:id="TextFieldSubescapular" layoutX="181.0" layoutY="275.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="245.0" layoutY="275.0" prefHeight="23.0" prefWidth="90.0" text="Abdomen" />
+                        <TextField fx:id="TextFieldAbdomen" layoutX="346.0" layoutY="275.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="310.0" prefHeight="23.0" prefWidth="130.0" text="Panturrilha medial" />
+                        <TextField fx:id="TextFieldPanturrilha" layoutX="181.0" layoutY="310.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="245.0" layoutY="310.0" prefHeight="23.0" prefWidth="90.0" text="Coxal" />
+                        <TextField fx:id="TextFieldCoxal" layoutX="346.0" layoutY="310.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="560.0" layoutY="204.0" prefHeight="23.0" prefWidth="130.0" text="Gordura corporal" />
+                        <TextField fx:id="TextFieldGordura" layoutX="701.0" layoutY="205.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="560.0" layoutY="241.0" prefHeight="23.0" prefWidth="130.0" text="Água" />
+                        <TextField fx:id="TextFieldAgua" layoutX="701.0" layoutY="240.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="560.0" layoutY="277.0" prefHeight="23.0" prefWidth="130.0" text="Músculo" />
+                        <TextField fx:id="TextFieldMusculo" layoutX="701.0" layoutY="275.0" prefWidth="60.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="560.0" layoutY="311.0" prefHeight="23.0" prefWidth="130.0" text="Massa óssea" />
+                        <TextField fx:id="TextFieldOssea" layoutX="701.0" layoutY="310.0" prefWidth="60.0" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

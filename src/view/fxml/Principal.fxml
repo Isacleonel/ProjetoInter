@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrincipalController">
+   <children>
+      <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+              <MenuItem fx:id="MenuItemEstado" mnemonicParsing="false" text="Estado" />
+                  <MenuItem fx:id="MenuItemCidade" mnemonicParsing="false" text="Cidade" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Relatórios">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox style="-fx-background-color: #e2e2e2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+         <children>
+            <Button fx:id="ButtonAlunos" alignment="CENTER" layoutX="300.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="Alunos" />
+            <Button fx:id="ButtonMatricula" alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="Matrícula" />
+            <Button fx:id="ButtonFrequencia" alignment="CENTER" layoutX="110.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="Frequência" />
+            <Button fx:id="ButtonProfessor" alignment="CENTER" layoutX="70.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="Professor" />
+            <Button fx:id="ButtonModalidade" alignment="CENTER" layoutX="130.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="Modalidade" />
+            <Button fx:id="ButtonContasReceber" alignment="CENTER" layoutX="310.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="Contas a Receber" />
+            <Button fx:id="ButtonAvaliacaoFisica" alignment="CENTER" layoutX="510.0" layoutY="10.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="Avaliação Física" />
+            <Button fx:id="ButtonSair" alignment="CENTER" layoutX="392.0" layoutY="4.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="Sair" />
+         </children>
+      </HBox>
+      <Pane layoutX="89.0" layoutY="159.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #003f5e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="83.0" />
+   </children>
+</AnchorPane>

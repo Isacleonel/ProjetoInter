@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane fx:id="AnchorPaneForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroFrequenciaController">
+   <children>
+      <HBox fx:id="HBoxForm" alignment="CENTER" prefHeight="60.0" prefWidth="800.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="ButtonNovo" layoutX="100.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Novo" />
+            <Button fx:id="ButtonSalvar" layoutX="219.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Salvar" />
+            <Button fx:id="ButtonModificar" mnemonicParsing="false" prefWidth="70.0" text="Modificar" />
+            <Button fx:id="ButtonCancelar" layoutX="408.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Cancelar" />
+            <Button fx:id="ButtonExcluir" layoutX="503.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Excluir" />
+            <Button fx:id="ButtonBuscar" layoutX="588.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Buscar" />
+            <Button fx:id="ButtonFechar" layoutX="575.0" layoutY="29.0" mnemonicParsing="false" prefWidth="70.0" text="Fechar" />
+         </children>
+      </HBox>
+      <Pane fx:id="PaneForm" layoutX="72.0" layoutY="108.0" prefHeight="440.0" prefWidth="633.0" style="-fx-background-color: #ffffff; -fx-border-color: #c0c0c0;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutY="40.0" prefHeight="23.0" prefWidth="110.0" text="Codigo" />
+            <TextField fx:id="TextFieldCodigo" editable="false" layoutX="121.0" layoutY="40.0" prefHeight="23.0" prefWidth="70.0" />
+            <Label alignment="CENTER_RIGHT" layoutY="75.0" prefHeight="23.0" prefWidth="110.0" text="Matricula*" />
+            <TextField fx:id="TextFieldCodigoAlu" layoutX="121.0" layoutY="75.0" prefHeight="23.0" prefWidth="70.0" />
+            <Label alignment="CENTER_RIGHT" layoutY="110.0" prefHeight="23.0" prefWidth="110.0" text="Mês*" />
+            <Button fx:id="ButtonBuscarAlu" layoutX="201.0" layoutY="75.0" mnemonicParsing="false" prefWidth="23.0" />
+            <TextField fx:id="TextFieldNomeAlu" layoutX="234.0" layoutY="75.0" prefWidth="300.0" />
+            <HBox fx:id="HBoxPlano" layoutX="120.0" layoutY="158.0" spacing="10.0" />
+            <HBox fx:id="HBoxHorario" layoutX="120.0" layoutY="193.0" />
+            <Label alignment="CENTER" layoutX="650.0" layoutY="365.0" prefHeight="23.0" prefWidth="130.0" text="* Campos Obrigatórios" />
+            <ComboBox fx:id="ComboBoxMes" layoutX="121.0" layoutY="110.0" prefWidth="140.0" />
+            <HBox fx:id="HBoxFrequencia" alignment="CENTER" layoutY="200.0" prefWidth="780.0" spacing="30.0">
+               <children>
+                  <VBox layoutX="64.0" layoutY="200.0" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="c1" layoutX="63.0" layoutY="204.0" mnemonicParsing="false" text="1" />
+                        <CheckBox fx:id="c11" layoutX="63.0" layoutY="235.0" mnemonicParsing="false" text="11" />
+                        <CheckBox fx:id="c21" layoutX="63.0" layoutY="271.0" mnemonicParsing="false" text="21" />
+                        <CheckBox fx:id="c31" layoutX="63.0" layoutY="311.0" mnemonicParsing="false" text="31" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="120.0" layoutY="200.0" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="c2" layoutX="63.0" layoutY="204.0" mnemonicParsing="false" text="2" />
+                        <CheckBox fx:id="c12" layoutX="63.0" layoutY="235.0" mnemonicParsing="false" text="12" />
+                        <CheckBox fx:id="c22" layoutX="63.0" layoutY="271.0" mnemonicParsing="false" text="22" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="173.0" layoutY="200.0" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="c3" layoutX="63.0" layoutY="204.0" mnemonicParsing="false" text="3" />
+                        <CheckBox fx:id="c13" layoutX="63.0" layoutY="235.0" mnemonicParsing="false" text="13" />
+                        <CheckBox fx:id="c23" layoutX="63.0" layoutY="271.0" mnemonicParsing="false" text="23" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="216.0" layoutY="200.0" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="c4" layoutX="63.0" layoutY="204.0" mnemonicParsing="false" text="4" />
+                        <CheckBox fx:id="c14" layoutX="63.0" layoutY="235.0" mnemonicParsing="false" text="14" />
+                        <CheckBox fx:id="c24" layoutX="63.0" layoutY="271.0" mnemonicParsing="false" text="24" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="276.0" layoutY="200.0" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="c5" layoutX="63.0" layoutY="204.0" mnemonicParsing="false" text="5" />
+                        <CheckBox fx:id="c15" layoutX="63.0" layoutY="235.0" mnemonicParsing="false" text="15" />
+                        <CheckBox fx:id="c25" layoutX="63.0" layoutY="271.0" mnemonicParsing="false" text="25" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="322.0" layoutY="200.0" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="c6" layoutX="63.0" layoutY="204.0" mnemonicParsing="false" text="6" />
+                        <CheckBox fx:id="c16" layoutX="63.0" layoutY="235.0" mnemonicParsing="false" text="16" />
+                        <CheckBox fx:id="c26" layoutX="63.0" layoutY="271.0" mnemonicParsing="false" text="26" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="383.0" layoutY="200.0" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="c7" layoutX="63.0" layoutY="204.0" mnemonicParsing="false" text="7" />
+                        <CheckBox fx:id="c17" layoutX="63.0" layoutY="235.0" mnemonicParsing="false" text="17" />
+                        <CheckBox fx:id="c27" layoutX="63.0" layoutY="271.0" mnemonicParsing="false" text="27" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="430.0" layoutY="200.0" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="c8" layoutX="63.0" layoutY="204.0" mnemonicParsing="false" text="8" />
+                        <CheckBox fx:id="c18" layoutX="63.0" layoutY="235.0" mnemonicParsing="false" text="18" />
+                        <CheckBox fx:id="c28" layoutX="63.0" layoutY="271.0" mnemonicParsing="false" text="28" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="491.0" layoutY="200.0" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="c9" layoutX="63.0" layoutY="204.0" mnemonicParsing="false" text="9" />
+                        <CheckBox fx:id="c19" layoutX="63.0" layoutY="235.0" mnemonicParsing="false" text="19" />
+                        <CheckBox fx:id="c29" layoutX="63.0" layoutY="271.0" mnemonicParsing="false" text="29" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="553.0" layoutY="200.0" spacing="20.0">
+                     <children>
+                        <CheckBox fx:id="c10" layoutX="63.0" layoutY="204.0" mnemonicParsing="false" text="10" />
+                        <CheckBox fx:id="c20" layoutX="63.0" layoutY="235.0" mnemonicParsing="false" text="20" />
+                        <CheckBox fx:id="c30" layoutX="63.0" layoutY="271.0" mnemonicParsing="false" text="30" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Label layoutX="14.0" layoutY="-1.0" prefHeight="52.0" prefWidth="107.0" text="Frequência" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

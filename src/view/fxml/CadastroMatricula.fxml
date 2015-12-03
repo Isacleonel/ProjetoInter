@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane fx:id="AnchorPaneForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroMatriculaController">
+   <children>
+      <HBox fx:id="HBoxForm" alignment="CENTER" prefHeight="60.0" prefWidth="800.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="ButtonNovo" layoutX="100.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Novo" />
+            <Button fx:id="ButtonSalvar" layoutX="219.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Salvar" />
+            <Button fx:id="ButtonModificar" mnemonicParsing="false" prefWidth="70.0" text="Modificar" />
+            <Button fx:id="ButtonCancelar" layoutX="408.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Cancelar" />
+            <Button fx:id="ButtonExcluir" layoutX="503.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Excluir" />
+            <Button fx:id="ButtonBuscar" layoutX="588.0" layoutY="555.0" mnemonicParsing="false" prefWidth="70.0" text="Buscar" />
+            <Button fx:id="ButtonFechar" layoutX="575.0" layoutY="29.0" mnemonicParsing="false" prefWidth="70.0" text="Fechar" />
+         </children>
+      </HBox>
+      <Pane fx:id="PaneForm" layoutX="72.0" layoutY="108.0" prefHeight="440.0" prefWidth="633.0" style="-fx-background-color: #ffffff; -fx-border-color: #c0c0c0;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="30.0" prefHeight="23.0" prefWidth="110.0" text="Codigo" />
+            <TextField fx:id="TextFieldCodigo" editable="false" layoutX="120.0" layoutY="30.0" prefHeight="23.0" prefWidth="70.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="65.0" prefHeight="23.0" prefWidth="110.0" text="Aluno*" />
+            <TextField fx:id="TextFieldCodigoAlu" layoutX="120.0" layoutY="65.0" prefHeight="23.0" prefWidth="70.0" />
+            <Button fx:id="ButtonBuscarAlu" layoutX="200.0" layoutY="65.0" mnemonicParsing="false" prefWidth="23.0" />
+            <TextField fx:id="TextFieldNomeAlu" layoutX="233.0" layoutY="65.0" prefWidth="300.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="100.0" prefHeight="23.0" prefWidth="110.0" text="Modalidade*" />
+            <TextField fx:id="TextFieldCodigoMod" layoutX="120.0" layoutY="100.0" prefHeight="23.0" prefWidth="70.0" />
+            <Button fx:id="ButtonBuscarMod" layoutX="200.0" layoutY="100.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="23.0" />
+            <TextField fx:id="TextFieldNomeMod" layoutX="233.0" layoutY="100.0" prefWidth="300.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="158.0" prefHeight="23.0" prefWidth="110.0" text="Plano*" />
+            <Label alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="193.0" prefHeight="23.0" prefWidth="110.0" text="Horário*" />
+            <HBox fx:id="HBoxPlano" layoutX="120.0" layoutY="158.0" spacing="10.0">
+               <children>
+                  <RadioButton fx:id="RadioButtonTodos" layoutX="120.0" layoutY="158.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="75.0" text="Todos dias">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Plano" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="RadioButton3" layoutX="205.0" layoutY="158.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="55.0" text="3 dias" toggleGroup="$Plano" />
+               </children>
+            </HBox>
+            <HBox fx:id="HBoxHorario" layoutX="120.0" layoutY="193.0">
+               <children>
+                  <TextField fx:id="TextFieldHoraIni" layoutX="90.0" layoutY="188.0" prefWidth="54.0" />
+                  <Label alignment="CENTER" layoutX="147.0" layoutY="174.0" lineSpacing="10.0" prefHeight="23.0" prefWidth="32.0" text="as" />
+                  <TextField fx:id="TextFieldHoraFim" layoutX="177.0" layoutY="170.0" prefWidth="54.0" />
+               </children>
+            </HBox>
+            <Label alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="228.0" prefHeight="23.0" prefWidth="110.0" text="Professor" />
+            <TextField fx:id="TextFieldCodigoPro" layoutX="120.0" layoutY="228.0" prefHeight="23.0" prefWidth="70.0" />
+            <Button fx:id="ButtonBuscarPro" layoutX="200.0" layoutY="228.0" mnemonicParsing="false" prefWidth="23.0" />
+            <TextField fx:id="TextFieldNomePro" layoutX="233.0" layoutY="228.0" prefWidth="300.0" />
+            <Button fx:id="ButtonLimparPro" layoutX="543.0" layoutY="228.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="23.0" />
+            <Label alignment="CENTER_RIGHT" layoutY="291.0" prefHeight="23.0" prefWidth="110.0" text="Dia Pagamento*" />
+            <TextField fx:id="TextFieldPagamento" layoutX="120.0" layoutY="291.0" prefWidth="54.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="326.0" prefHeight="23.0" prefWidth="110.0" text="Valor Mensal*" />
+            <TextField fx:id="TextFieldMensal" layoutX="120.0" layoutY="326.0" prefWidth="54.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="361.0" prefHeight="23.0" prefWidth="110.0" text="Valor Personal" />
+            <TextField fx:id="TextFieldPersonal" layoutX="120.0" layoutY="361.0" prefWidth="54.0" />
+            <Separator layoutX="30.0" layoutY="143.0" prefWidth="720.0" />
+            <Separator layoutX="30.0" layoutY="271.0" prefWidth="720.0" />
+            <Label alignment="CENTER" layoutX="650.0" layoutY="417.0" prefHeight="23.0" prefWidth="130.0" text="* Campos Obrigatórios" />
+         </children>
+      </Pane>
+      <Label layoutX="14.0" layoutY="-1.0" prefHeight="52.0" prefWidth="107.0" text="Cadastro de Matrícula" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
